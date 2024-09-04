@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Agenda</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Estilos do formulário */
+        form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        input {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            flex: 1;
+        }
+
+        input:focus {
+            border-color: #3f51b5;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Estilo do botão de adicionar */
+        form button {
+            background-color: #4caf50;
+        }
+
+        form button:hover {
+            background-color: #388e3c;
+        }
+
+        /* Estilos dos botões de editar e deletar */
+        .edit-button {
+            background-color: #2196f3;
+            margin-left: 5px;
+        }
+
+        .edit-button:hover {
+            background-color: #1976d2;
+        }
+
+        .delete-button {
+            background-color: #f44336;
+            margin-left: 5px;
+        }
+
+        .delete-button:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Estilo da lista */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .li-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Agenda de Telefones</h1>
+
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <input type="text" id="nameInput" placeholder="Nome" required>
+            <input type="text" id="phoneInput" placeholder="Telefone" required>
+            <button type="submit">Adicione Contatos</button>
+        </form>
+
+        <!-- Contact List Display -->
+        <ul id="contactList"></ul>
+    </div>
+
+    <!-- Referência ao script externo -->
+    <script src="./app.js"></script>
+
+</body>
+</html>
